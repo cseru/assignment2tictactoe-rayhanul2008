@@ -149,7 +149,7 @@ public class Game {
      * @return String indicating the outcome of the game: "X wins" or "O wins" or "Tie" or "None"
      */
     public String checkGameWinner(char [][]grid){
-      // String result = "None";
+       String result = "None";
 	 // Student code goes here...
 	
 	for(int i = 0; i < 3; i++){
