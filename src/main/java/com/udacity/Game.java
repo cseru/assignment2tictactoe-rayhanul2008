@@ -149,7 +149,7 @@ public class Game {
      * @return String indicating the outcome of the game: "X wins" or "O wins" or "Tie" or "None"
      */
     public String checkGameWinner(char [][]grid){
-       String result = "None";
+       //String result = "None";
 	 // Student code goes here...
 	
 	for(int i = 0; i < 3; i++){
@@ -171,35 +171,35 @@ public class Game {
 		return "O Wins";
 	}
 	for(int i = 0; i < 3; i++){
-		int Xcount = 0,Ocount = 0;
+		int Xcount1 = 0,Ocount1 = 0;
 		for(int j = 0; j < 3; j++){
 		if(grid[j][i]  == 'x'){
-		 Xcount = Xcount + 1;
+		 Xcount1 = Xcount1 + 1;
 		}
 		else if(grid[j][i] == 'o'){
-		Ocount = Ocount + 1;
+		Ocount1 = Ocount1 + 1;
 		}
 
 		}
 	}
-	if(Xcount == 3){
+	if(Xcount1 == 3){
 		return "X Wins";
 	}
-	else if(Ocount == 3){
+	else if(Ocount1 == 3){
 		return "O Wins";
 	}
-	int Xcount = 0,Ocount = 0;
+	int Xcount2 = 0,Ocount2 = 0;
 	for(int i = 0; i < 3; i++){
 		if(grid[i][i] == 'x'){
-			Xcount = Xcount + 1;
+			Xcount2 = Xcount2 + 1;
 		}
 		else if(grid[i][i] == 'o'){
-			Ocount = Ocount + 1;
+			Ocount2 = Ocount2 + 1;
 		}
-		if(Xcount == 3){
+		if(Xcount2 == 3){
 		return "X Wins";
 	}
-	else if(Ocount == 3){
+	else if(Ocount2 == 3){
 		return "O Wins";
 	}
 	}
