@@ -151,9 +151,9 @@ public class Game {
     public String checkGameWinner(char [][]grid){
        //String result = "None";
 	 // Student code goes here...
-	
+        int Xcount = 0,Ocount = 0;
 	for(int i = 0; i < 3; i++){
-		int Xcount = 0,Ocount = 0;
+
 		for(int j = 0; j < 3; j++){
 		if(grid[i][j]  == 'x'){
 		 Xcount = Xcount + 1;
@@ -165,13 +165,14 @@ public class Game {
 		}
 	}
 	if(Xcount == 3){
-		return "X Wins";
+		return "w wins";
 	}
 	else if(Ocount == 3){
-		return "O Wins";
+		return "o wins";
 	}
+        int Xcount1 = 0,Ocount1 = 0;
 	for(int i = 0; i < 3; i++){
-		int Xcount1 = 0,Ocount1 = 0;
+
 		for(int j = 0; j < 3; j++){
 		if(grid[j][i]  == 'x'){
 		 Xcount1 = Xcount1 + 1;
@@ -183,10 +184,10 @@ public class Game {
 		}
 	}
 	if(Xcount1 == 3){
-		return "X Wins";
+		return "x wins";
 	}
 	else if(Ocount1 == 3){
-		return "O Wins";
+		return "o wins";
 	}
 	int Xcount2 = 0,Ocount2 = 0;
 	for(int i = 0; i < 3; i++){
@@ -197,20 +198,20 @@ public class Game {
 			Ocount2 = Ocount2 + 1;
 		}
 		if(Xcount2 == 3){
-		return "X Wins";
+		return "x wins";
 	}
 	else if(Ocount2 == 3){
-		return "O Wins";
+		return "o wins";
 	}
 	}
 	for(int i = 0; i < 3; i++){
 		for(int j = 0; j < 3; j++){
 			if(grid[i][j] == '-'){
-				return "None";
+				return "none";
 			}
 		}
 	}
-	return "Tie";
+	return "tie";
     }
 
     /**
