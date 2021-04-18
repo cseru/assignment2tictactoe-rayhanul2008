@@ -149,46 +149,47 @@ public class Game {
      * @return String indicating the outcome of the game: "X wins" or "O wins" or "Tie" or "None"
      */
     public String checkGameWinner(char [][]grid){
-       //String result = "None";
-	 // Student code goes here...
-        int Xcount = 0,Ocount = 0;
-	for(int i = 0; i < 3; i++){
 
+       String result = "None";
+	 // Student code goes here...
+
+	for(int i = 0; i < 3; i++){
+        int Xcount = 0,Ocount = 0;
 		for(int j = 0; j < 3; j++){
-		if(grid[i][j]  == 'x'){
+		if(grid[i][j] == 'x'){
 		 Xcount = Xcount + 1;
 		}
 		else if(grid[i][j] == 'o'){
 		Ocount = Ocount + 1;
 		}
-
 		}
+        if(Xcount == 3){
+            return "x wins";
+        }
+        else if(Ocount == 3){
+            return "o wins";
+        }
 	}
-	if(Xcount == 3){
-		return "w wins";
-	}
-	else if(Ocount == 3){
-		return "o wins";
-	}
-        int Xcount1 = 0,Ocount1 = 0;
-	for(int i = 0; i < 3; i++){
 
+	for(int i = 0; i < 3; i++){
+        int Xcount = 0,Ocount = 0;
 		for(int j = 0; j < 3; j++){
 		if(grid[j][i]  == 'x'){
-		 Xcount1 = Xcount1 + 1;
+		 Xcount = Xcount + 1;
 		}
 		else if(grid[j][i] == 'o'){
-		Ocount1 = Ocount1 + 1;
+		Ocount = Ocount + 1;
 		}
 
 		}
+        if(Ocount == 3){
+            return "o wins";
+        }
+        else if(Xcount == 3){
+            return "x wins";
+        }
 	}
-	if(Xcount1 == 3){
-		return "x wins";
-	}
-	else if(Ocount1 == 3){
-		return "o wins";
-	}
+
 	int Xcount2 = 0,Ocount2 = 0;
 	for(int i = 0; i < 3; i++){
 		if(grid[i][i] == 'x'){
@@ -197,13 +198,29 @@ public class Game {
 		else if(grid[i][i] == 'o'){
 			Ocount2 = Ocount2 + 1;
 		}
-		if(Xcount2 == 3){
-		return "x wins";
 	}
-	else if(Ocount2 == 3){
-		return "o wins";
-	}
-	}
+        if(Xcount2 == 3){
+            return "x wins";
+        }
+        else if(Ocount2 == 3){
+            return "o wins";
+        }
+        int Xcount3 = 0,Ocount3 = 0;
+    for(int j=0,i=2; i>=0; i = i - 1,j++){
+        if(grid[i][j] == 'x'){
+            Xcount3 = Xcount3 + 1;
+        }
+        else if(grid[i][j] == 'o'){
+            Ocount3 = Ocount3 + 1;
+        }
+        if(Xcount3 == 3){
+            return "x wins";
+        }
+        else if(Ocount3 == 3){
+            return "o wins";
+        }
+    }
+
 	for(int i = 0; i < 3; i++){
 		for(int j = 0; j < 3; j++){
 			if(grid[i][j] == '-'){
